@@ -53,6 +53,7 @@ import DefaultRules from '@/defaultData/DefaultRules'
 export default {
   data() {
       return {
+          name:'dynamicForm',
           defaultRules:this.DefaultRules
       }
   },
