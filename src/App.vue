@@ -9,17 +9,28 @@
       </p>
       <el-button>asdasd</el-button>
     </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <dynamicForm ref="dy1" className="twocel" :formData='formData' labelWidth="160px" refname="form1"
+  :disabled="false" size="mini" :model="baseInfo" ></dynamicForm>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  data(){
+    return {
+      formData:{},
+      baseInfo:{},
+    }
+  },
+  mounted:function(){
+    window.console.log(this.msg);
+    this.formData = {
+      asd:{label:'大娃娃',formType:'input',validate:'notNullInput'},
+      asd1:{label:'大刀王五',formType:'input',validate:'notNullInput'},
+      asd2:{label:'大娃娃2',formType:'input',validate:'notNullInput'},
+      asd3:{label:'3大娃娃',formType:'input',validate:'notNullInput'}
+    }
   }
 }
 </script>

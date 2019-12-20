@@ -2,9 +2,9 @@
   <el-form :model="model" :label-width="labelWidth" :style="styles"
     :ref="refname"  :disabled="disabled" :size="size">
     <div :class="['form-body',className]" style="padding:10px 0px">
-      <div v-for="(e,index) in formData" :key="index">
+      <div class="form-items" v-for="(e,index) in formData" :key="index">
         <el-form-item v-if="!e.hide" :label="e.label" :prop="index" :rules="(e.disabled || disabled)?[]:defaultRules[e.validate]"
-        :class="{'form-items':true,'readonly':disabled,'rows':e.isRows,'rows-half':e.isRowsHalf}">
+        :class="{'readonly':disabled,'rows':e.isRows,'rows-half':e.isRowsHalf}">
           <!-- input -->
           <el-input v-if="e.formType == 'input'" :disabled="e.disabled" :readonly="e.readonly"
           v-model="model[index]" :placeholder="disabled?'':e.placeholder" :maxlength="e.maxlength" @focus="fn(e.focus)" @bulr="fn(e.bulr)"></el-input>
@@ -53,10 +53,10 @@ import DefaultRules from '@/defaultData/DefaultRules'
 export default {
   data() {
       return {
-          name:'dynamicForm',
-          defaultRules:this.DefaultRules
+          defaultRules:DefaultRules.rules
       }
   },
+  name:'dynamicForm',
   props:['formData','labelWidth','styles','size','model','disabled','refname','optionList','className'],
 	mounted:function(){
 	},

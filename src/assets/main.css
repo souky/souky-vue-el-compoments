@@ -1,0 +1,190 @@
+/* gloab css*/
+body{
+	margin: 0px;
+}
+
+
+/*srcoll bar*/
+::-webkit-scrollbar{width: 4px;height:4px;position: absolute;right: 0px;top: 0px;z-index: 9999;}
+::-webkit-scrollbar-track{background-color:#E0E0E0;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius:2px;}
+::-webkit-scrollbar-thumb{background-color:#868686;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius:2px;}
+
+/* animate */
+
+/* 0.2s transition*/
+.transition-two-msec{
+	transition: all .2s;
+	-moz-transition: all .2s; /* Firefox 4 */
+	-webkit-transition: all .2s; /* Safari 和 Chrome */
+	-o-transition: all .2s; /* Opera */
+}
+/* 0.3s transition*/
+.transition-three-msec{
+	transition: all .3s;
+	-moz-transition: all .3s; /* Firefox 4 */
+	-webkit-transition: all .3s; /* Safari 和 Chrome */
+	-o-transition: all .3s; /* Opera */
+}
+
+/* 垂直、水平居中*/
+.v-h-center{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 垂直居中*/
+.v-center{
+	display: flex;
+  align-items: center;
+}
+/* 水平居中*/
+.h-center{
+	display: flex;
+  justify-content: center;
+}
+.main-body{
+	height: calc(100vh - 54px);
+}
+
+/* box body*/
+.main-box{
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: 1px 1px 10px #c8c8c8;
+	background: #fff;
+	position: relative;
+}
+
+
+/* page 分页 */
+.pages{
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  padding:10px 20px;
+	box-sizing: border-box;
+}
+
+/* 动态table */
+.dynamicTable{
+	flex:1;
+	padding:5px;
+	margin-top: 5px;
+	box-sizing: border-box;
+}
+.dynamicTable td.operations .cell{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.dynamicTable td.operations .cell .op_items{
+  margin:auto 3px;
+}
+.dynamicTable .el-table th>.cell.highlight{
+  color: #909399;
+}
+.dynamicTable th{
+	background: #1989fa;
+	color:#fff;
+	text-align: center;
+	font-weight: 400;
+}
+.dynamicTable td{
+	text-align: center;
+}
+.dynamicTable .btns{
+	display: flex;
+	justify-content: flex-end;
+	margin:auto auto 5px auto;
+}
+
+
+/*form*/
+.form-body{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap:wrap;
+    width:100%;
+    padding:0px 10px;
+    box-sizing: border-box;
+}
+.form-body.twocel .form-items{
+	width: 48%;
+	margin: 6px 2% 6px 0;
+}
+
+.form-body .form-items{
+    width: 31%;
+    margin: 6px 2% 6px 0;
+}
+.form-body .form-items.readonly .el-input__inner,.form-body .form-items.readonly .el-textarea__inner{
+    background:#f5f7fa;
+}
+.form-body .form-items.rows-half{
+    width:63%
+}
+.form-body .form-items.rows-really-half{
+    width: 47%;
+}
+.form-body .form-items.rows{
+    width: 97%;
+}
+.form-body .el-select.el-select--small,
+.form-body .el-select.el-select--mini{
+    width: 100%;
+}
+.form-body .el-date-editor.el-input, .form-body .el-date-editor.el-input__inner{
+    width: 100%;
+}
+.form-body .el-checkbox__label{
+	font-size: 12px
+}
+.form-body .el-form-item__label{
+	font-size: 12px
+}
+
+/* search */
+.form-body.table-search{
+	padding: 0px 5px;
+	box-shadow: 0px 2px 5px #eaeaea;
+}
+.form-body.table-search .form-items{
+	width: 16%;
+	margin:10px 2% 10px 2%;
+}
+.form-body.table-search .search {
+	display: flex;
+	justify-content: flex-end;
+	box-sizing: border-box;
+	width: 19%;
+	margin:10px 0% 10px 1%;
+}
+
+/* 详情页btn组 */
+.info-btns{
+	position:absolute;
+	z-index:99;
+	right:5px;
+	top:5px;
+	display: flex;
+	justify-content: flex-end;
+}
+.info-btns button{
+	height: 30px;
+	line-height: 30px;
+	padding:0px;
+	box-sizing: border-box;
+	min-width: 80px;
+	font-size: 12px;
+}
+
+
+/* table btn组 */
+.opts .cell{
+	overflow: visible;
+}
+.opt-btns button{
+	position: relative;
+}
