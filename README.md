@@ -1,24 +1,16 @@
-# souky-dynamic-form
+# souky-compoments
 
-## Project setup
-```
-npm install
-```
+# api
+http://api.soukys.com
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# version 0.0.2 update
+版本号: 0.0.2 -- 更新情况：
+1.新增动态table组件
+2.新增formatInput组件
+3.新增optBtns组件
+4.新增tablePages组件
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+版本号: 0.0.2 -- 修复情况：
+1.修复css样式
+2.修复dynamicForm
+3.修改MD文件

@@ -1,7 +1,16 @@
 import dynamicForm from './dynamicForm/dynamicForm.vue'
+import dynamicTable from './dynamicTable/dynamicTable.vue'
+import formatInput from './formatInput/formatInput.vue'
+import optBtns from './optBtns/optBtns.vue'
+import tablePages from './tablePages/tablePages.vue'
+import './css/main.css'
 
 const components = [
-  dynamicForm
+  dynamicForm,
+  dynamicTable,
+  formatInput,
+  optBtns,
+  tablePages
 ]
 
 const install = function(Vue) {
@@ -10,4 +19,11 @@ const install = function(Vue) {
   });
 }
 
-export default install
+export default {
+  install,
+  dynamicForm,
+  dynamicTable,
+  formatInput,
+  optBtns,
+  tablePages
+}

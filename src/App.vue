@@ -1,16 +1,14 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <div>
-      <p>
-        If Element is successfully added to this project, you'll see an
-        <code v-text="'<el-button>'"></code>
-        below
-      </p>
-      <el-button>asdasd</el-button>
-    </div>
-    <dynamicForm ref="dy1" className="twocel" :formData='formData' labelWidth="160px" refname="form1"
-  :disabled="false" size="mini" :model="baseInfo" ></dynamicForm>
+
+    <dynamic-form ref="dy1" className="" :formData='formData' labelWidth="160px" refname="form1"
+  :disabled="false" size="mini" :model="baseInfo" />
+
+    <table-pages :pages="pages"/>
+
+    <opt-btns :data="rows" />
+
+    <format-input :model="baseInfo.asd" />
   </div>
 </template>
 
@@ -21,6 +19,12 @@ export default {
     return {
       formData:{},
       baseInfo:{},
+      pages:{
+        pageNum:1,
+        pageSize:10,
+        total:222
+      },
+      rows:{}
     }
   },
   mounted:function(){

@@ -37,11 +37,11 @@
           <el-input v-if="e.formType == 'textarea'" v-model="model[index]" :maxlength="e.maxlength" :placeholder="disabled?'':e.placeholder"
           :rows="e.rowsSize" :resize='e.resize' type="textarea" :disabled="e.disabled" :readonly="e.readonly"></el-input>
 
-          <FormatInput v-if="e.formType == 'formatInput' && !disabled" v-model="model[index]" :placeholder="disabled?'':e.placeholder"
-          :disabled="e.disabled" :size="size" :decimal="e.decimal?2:e.decimal" :append="e.append" :readonly="e.readonly"></FormatInput>
+          <format-input v-if="e.formType == 'formatInput' && !disabled" v-model="model[index]" :placeholder="disabled?'':e.placeholder"
+          :disabled="e.disabled" :size="size" :decimal="e.decimal?2:e.decimal" :append="e.append" :readonly="e.readonly"></format-input>
 
-          <FormatInput v-if="e.formType == 'formatInput' && disabled" v-model="model[index]" :placeholder="disabled?'':e.placeholder"
-          :disabled="disabled" :size="size" :decimal="e.decimal?2:e.decimal" :append="e.append" :readonly="e.readonly"></FormatInput>
+          <format-input v-if="e.formType == 'formatInput' && disabled" v-model="model[index]" :placeholder="disabled?'':e.placeholder"
+          :disabled="disabled" :size="size" :decimal="e.decimal?2:e.decimal" :append="e.append" :readonly="e.readonly"></format-input>
         </el-form-item>
       </div>
     </div>
@@ -56,7 +56,7 @@ export default {
           defaultRules:DefaultRules.rules
       }
   },
-  name:'dynamicForm',
+  name:'dynamic-form',
   props:['formData','labelWidth','styles','size','model','disabled','refname','optionList','className'],
 	mounted:function(){
 	},
