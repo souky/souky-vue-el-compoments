@@ -46,7 +46,6 @@ export default{
     // 身份证验证
     isIdCard:[
       {validator:function(rule, value, callback){
-        //let reg = /^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X|x)$/;
         let reg = /^([1-9]\d{5})((18|19|20)\d{2})((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}([0-9]|X|x)$/
         if (reg.test(value)) {
           callback();
